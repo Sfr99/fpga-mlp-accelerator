@@ -117,16 +117,16 @@ In other words, the design already expresses the faster configuration; the curre
 
 ## Repository structure
 
-| Path | Contents | Authorship |
+| Path | Contents | 
 |---|---|---|
-| `rtl/core/` | The compute core: `neurona`, `capa`, `top`, `counter`, `reg_32`, `weights_pkg` | Original |
-| `rtl/axi/` | AXI wrappers for the streaming IP - input packing, output mux, cycle counter, DMA init FSM | Vivado AXI template + original user logic |
-| `rtl/axilite_baseline/` | The earlier AXI-Lite version of the accelerator (the starting point of the story) | Mixed: original core + template wrappers |
-| `sim/` | Testbenches: `tb_top.vhd`, `test_pkg.vhd`, `mlp_accel_stream_tb.sv` | Original |
-| `sw/baremetal/` | Bare-metal ARM C: `mlp_stream.c` (DMA path), `mlp_axilite.c` (baseline), `forward.*` (reference inference), `pmu.*` (cycle counting) | Original |
-| `sw/scripts/` | Python generators for weights and test vectors (`gen_weights_*`, `gen_test_*`, `quan_test`) | Original |
-| `ip/` | Tcl scripts to package/regenerate the custom IP | Generated |
-| `docs/images/` | Diagrams | Original |
+| `rtl/core/` | The compute core: `neurona`, `capa`, `top`, `counter`, `reg_32`, `weights_pkg` | 
+| `rtl/axi/` | AXI wrappers for the streaming IP - input packing, output mux, cycle counter, DMA init FSM | 
+| `rtl/axilite_baseline/` | The earlier AXI-Lite version of the accelerator (the starting point of the story) | 
+| `sim/` | Testbenches: `tb_top.vhd`, `test_pkg.vhd`, `mlp_accel_stream_tb.sv` | 
+| `sw/baremetal/` | Bare-metal ARM C: `mlp_stream.c` (DMA path), `mlp_axilite.c` (baseline), `forward.*` (reference inference), `pmu.*` (cycle counting) | 
+| `sw/scripts/` | Python generators for weights and test vectors (`gen_weights_*`, `gen_test_*`, `quan_test`) | 
+| `ip/` | Tcl scripts to package/regenerate the custom IP | 
+| `docs/images/` | Diagrams | 
 
 
 
