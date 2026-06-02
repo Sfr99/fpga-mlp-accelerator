@@ -33,15 +33,19 @@ The target to beat: the same model running on the ARM Cortex-A9 @ 666 MHz, compi
 
 ### Energy
 
-Energy efficiency matters as much as latency in embedded systems:
+Energy efficiency matters as much as latency in embedded systems. Energy per inference is **power × time**:
 
-| | Power | Energy per inference |
-|---|---|---|
-| ARM (software) | 1.531 W (PS7) | ~202 µJ |
-| FPGA accelerator (PL) | 0.384 W | ~12 µJ |
+| | Power (used in calc.) | Time | Energy per inference |
+|---|---|---|---|
+| ARM (software) | ~1.68 W (ARM under load) | 120 µs | ~202 µJ |
+| FPGA accelerator | 2.068 W (total on-chip) | 5.76 µs | ~12 µJ |
 
-**~17× less energy per inference.**
+**~17× less energy per inference** (202 / 12).
 
+A few honest caveats on these figures:
+
+- The hardware power is the **total on-chip** figure reported by Vivado (2.068 W: dynamic + static), not just the accelerator's own 0.384 W — the ARM stays powered during PL compute, so it must be counted.
+- The ARM software power (~1.68 W) is an **estimate** of the PS7 under computational load, not a direct measurement; the report's idle PS7 figure is ~1.531 W. The order of magnitude of the result is robust to this estimate, since the ~21× shorter runtime dominates.
 ---
 
 ## The model
