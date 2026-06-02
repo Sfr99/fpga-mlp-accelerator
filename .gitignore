@@ -1,0 +1,20 @@
+# Vivado / Vitis generated
+*.jou
+*.log
+*.str
+*.dcp
+*.bit
+*.xsa
+*.runs/
+*.cache/
+*.gen/
+*.hw/
+*.sim/
+*.ip_user_files/
+.Xil/
+_ide/
+vivado*.backup*
+
+# OS
+.DS_Store
+Thumbs.db
