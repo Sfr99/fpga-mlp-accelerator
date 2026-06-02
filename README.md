@@ -118,7 +118,7 @@ In other words, the design already expresses the faster configuration; the curre
 ## Repository structure
 
 | Path | Contents | 
-|---|---|---|
+|---|---|
 | `rtl/core/` | The compute core: `neurona`, `capa`, `top`, `counter`, `reg_32`, `weights_pkg` | 
 | `rtl/axi/` | AXI wrappers for the streaming IP - input packing, output mux, cycle counter, DMA init FSM | 
 | `rtl/axilite_baseline/` | The earlier AXI-Lite version of the accelerator (the starting point of the story) | 
