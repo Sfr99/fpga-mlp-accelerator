@@ -44,7 +44,7 @@ Energy efficiency matters as much as latency in embedded systems. Energy per inf
 
 A few honest caveats on these figures:
 
-- The hardware power is the **total on-chip** figure reported by Vivado (2.068 W: dynamic + static), not just the accelerator's own 0.384 W — the ARM stays powered during PL compute, so it must be counted.
+- The hardware power is the **total on-chip** figure reported by Vivado (2.068 W: dynamic + static), not just the accelerator's own 0.384 W - the ARM stays powered during PL compute, so it must be counted.
 - The ARM software power (~1.68 W) is an **estimate** of the PS7 under computational load, not a direct measurement; the report's idle PS7 figure is ~1.531 W. The order of magnitude of the result is robust to this estimate, since the ~21× shorter runtime dominates.
 ---
 
